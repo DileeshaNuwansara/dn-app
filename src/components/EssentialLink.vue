@@ -1,15 +1,17 @@
 <template>
   <q-item
-    clickable
-    tag="a"
-    target="_blank"
-    :href="props.link"
+
+  clickable
+  tag="router-link"
+  :to="link"
   >
+
+  
     <q-item-section
-      v-if="props.icon"
+      v-if="icon"
       avatar
     >
-      <q-icon :name="props.icon" />
+      <q-icon :name="icon" />
     </q-item-section>
 
     <q-item-section>
@@ -17,6 +19,7 @@
       <q-item-label caption>{{ props.caption }}</q-item-label>
     </q-item-section>
   </q-item>
+  
 </template>
 
 <script setup>
